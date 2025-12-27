@@ -7,21 +7,21 @@ services:
     deploy:
       replicas: 1
 
-  auth:
+  auth_service:
     image: authimg
     ports:
       - "5001:5001"
     deploy:
       replicas: 1
 
-  book:
+  book_service:
     image: bookimg
     ports:
       - "5002:5002"
     deploy:
       replicas: 1
 
-  borrow:
+  borrow_service:
     image: borrowimg
     ports:
       - "5003:5003"
