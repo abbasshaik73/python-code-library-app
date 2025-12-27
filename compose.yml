@@ -1,4 +1,3 @@
----
 version: "3"
 services:
   db:
@@ -8,30 +7,30 @@ services:
     deploy:
       replicas: 1
 
-   auth:
-     image: authimg
-     ports:
-       - "5001:5001"
-     deploy:
-       replicas: 1
+  auth:
+    image: authimg
+    ports:
+      - "5001:5001"
+    deploy:
+      replicas: 1
 
-   book:
-     image: bookimg
-     ports:
-       - "5002:5002"
-     deploy:
-       replicas: 1
+  book:
+    image: bookimg
+    ports:
+      - "5002:5002"
+    deploy:
+      replicas: 1
 
-   borrow:
-     image: borrowimg
-     ports:
-       - "5003:5003"
-     deploy:
-       replicas: 1
+  borrow:
+    image: borrowimg
+    ports:
+      - "5003:5003"
+    deploy:
+      replicas: 1
 
-   frontend:
-     image: frontendimg
-     ports:
-       - "5000:5000"
-     deploy:
-       replicas: 1
+  frontend:
+    image: frontendimg
+    ports:
+      - "5000:5000"
+    deploy:
+      replicas: 1
