@@ -1,36 +1,41 @@
 version: "3"
 services:
   db:
-    container_name: db-cont
     image: abbasshaik739/project1:dbimage
     ports:
-      - "3306:3306"
+      - "3306"
+    deploy:
+       replicas: 2
     
 
   auth_service:
-    container_name: auth-cont
     image: abbasshaik739/project1:authimage
     ports:
-      - "5001:5001"
+      - "5001"
+    deploy:
+       replicas: 2
     
 
   book_service:
-    container_name: book-cont
     image: abbasshaik739/project1:bookimage
     ports:
-      - "5002:5002"
+      - "5002"
+    deploy:
+       replicas: 2
     
 
   borrow_service:
-    container_name: borrow-cont
     image: abbasshaik739/project1:borrowimage
     ports:
-      - "5003:5003"
+      - "5003"
+    deploy:
+       replicas: 2
     
 
   frontend:
-    container_name: frontend-cont
     image: abbasshaik739/project1:frontendimage
     ports:
       - "5000"
+    deploy:
+       replicas: 2
     
