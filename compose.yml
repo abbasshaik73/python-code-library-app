@@ -1,41 +1,41 @@
 version: "3"
 services:
   db:
-    image: abbasshaik739/project1:dbimage
+    image: abbasshaik739/project2:dbimage
     ports:
       - "3306"
     deploy:
-       replicas: 2
+       replicas: 1
     
 
   auth_service:
-    image: abbasshaik739/project1:authimage
+    image: abbasshaik739/project2:authimage
     ports:
       - "5001"
     deploy:
-       replicas: 2
+       replicas: 1
     
 
   book_service:
-    image: abbasshaik739/project1:bookimage
+    image: abbasshaik739/project2:bookimage
     ports:
       - "5002"
     deploy:
-       replicas: 2
+       replicas: 1
     
 
   borrow_service:
-    image: abbasshaik739/project1:borrowimage
+    image: abbasshaik739/project2:borrowimage
     ports:
       - "5003"
     deploy:
-       replicas: 2
+       replicas: 1
     
 
   frontend:
-    image: abbasshaik739/project1:frontendimage
+    image: abbasshaik739/project2:frontendimage
     ports:
       - "5000"
     deploy:
-       replicas: 2
+       replicas: 1
     
