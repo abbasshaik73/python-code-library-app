@@ -5,8 +5,9 @@ services:
     image: abbasshaik739/project1:databaseimage
     ports:
       - "3306"
-    networks:
-      - appnet
+    deploy:
+       replicas: 1
+    
 
 
   auth_service:
@@ -14,17 +15,17 @@ services:
     image: abbasshaik739/project1:authimage
     ports:
       - "5001"
-    networks:
-      - appnet
+    deploy:
+       replicas: 1
 
   book_service:
     
     image: abbasshaik739/project1:bookimage
     ports:
       - "5002"
-    networks:
-      - appnet
-
+    deploy:
+       replicas: 1
+    
 
 
   borrow_service:
@@ -32,8 +33,9 @@ services:
     image: abbasshaik739/project1:borrowimage
     ports:
       - "5003"
-    networks:
-      - appnet
+    deploy:
+       replicas: 1
+    
 
 
   frontend:
@@ -41,11 +43,7 @@ services:
     image: abbasshaik739/project1:appimage
     ports:
       - "5000"
-    networks:
-      - appnet
-
-
-network:
-  appnet:
+    deploy:
+       replicas: 1
     
-    driver: bridge
+
