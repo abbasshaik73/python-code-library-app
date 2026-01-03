@@ -1,37 +1,53 @@
 version: "3"
 services:
   db:
-    container_name: dbcont
+    container_name: dbcont1
     image: abbasshaik739/project1:databaseimage
     ports:
       - "3306"
+    networks:
+      - appnet
     
 
   auth_service:
-    container_name: authcont
+    container_name: authcont1
     image: abbasshaik739/project1:authimage
     ports:
       - "5001"
+    networks:
+      - appnet
     
 
   book_service:
-    container_name: bookcont
+    container_name: bookcont1
     image: abbasshaik739/project1:bookimage
     ports:
       - "5002"
+    networks:
+      - appnet
     
     
 
   borrow_service:
-    container_name: borrowcont
+    container_name: borrowcont1
     image: abbasshaik739/project1:borrowimage
     ports:
       - "5003"
+    networks:
+      - appnet
     
 
   frontend:
-    container_name: appcont
+    container_name: appcont1
     image: abbasshaik739/project1:appimage
     ports:
       - "5000"
+    networks:
+      - appnet
+
+network:
+  appnet:
+    driver: bridge
+
+   
     
