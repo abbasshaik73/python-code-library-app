@@ -1,7 +1,7 @@
 version: "3"
 services:
   db:
-    image: abbasshaik739/project2:dbimage
+    image: abbasshaik739/project1:databaseimage
     ports:
       - "3306"
     deploy:
@@ -9,7 +9,7 @@ services:
     
 
   auth_service:
-    image: abbasshaik739/project2:authimage
+    image: abbasshaik739/project1:authimage
     ports:
       - "5001"
     deploy:
@@ -17,7 +17,7 @@ services:
     
 
   book_service:
-    image: abbasshaik739/project2:bookimage
+    image: abbasshaik739/project1:bookimage
     ports:
       - "5002"
     deploy:
@@ -25,7 +25,7 @@ services:
     
 
   borrow_service:
-    image: abbasshaik739/project2:borrowimage
+    image: abbasshaik739/project1:borrowimage
     ports:
       - "5003"
     deploy:
@@ -33,7 +33,7 @@ services:
     
 
   frontend:
-    image: abbasshaik739/project2:frontendimage
+    image: abbasshaik739/project1:appimage
     ports:
       - "5000"
     deploy:
