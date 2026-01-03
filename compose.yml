@@ -7,7 +7,7 @@ services:
       - "3306"
     networks:
       - appnet
-    
+
 
   auth_service:
     container_name: authcont1
@@ -16,7 +16,6 @@ services:
       - "5001"
     networks:
       - appnet
-    
 
   book_service:
     container_name: bookcont1
@@ -25,8 +24,8 @@ services:
       - "5002"
     networks:
       - appnet
-    
-    
+
+
 
   borrow_service:
     container_name: borrowcont1
@@ -35,7 +34,7 @@ services:
       - "5003"
     networks:
       - appnet
-    
+
 
   frontend:
     container_name: appcont1
@@ -45,9 +44,7 @@ services:
     networks:
       - appnet
 
-network:
-  appnet:
-    driver: bridge
 
-   
-    
+network:
+  driver: bridge
+
