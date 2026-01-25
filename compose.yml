@@ -2,7 +2,7 @@ version: "3"
 services:
   db:
     
-    image: abbasshaik739/python:dbimage
+    image: abbasshaik739/python1:dbimage
     ports:
       - "3306"
     deploy:
@@ -12,7 +12,7 @@ services:
 
   auth_service:
     
-    image: abbasshaik739/python:authimage
+    image: abbasshaik739/python1:authimage
     ports:
       - "5001"
     deploy:
@@ -20,7 +20,7 @@ services:
 
   book_service:
     
-    image: abbasshaik739/python:bookimage
+    image: abbasshaik739/python1:bookimage
     ports:
       - "5002"
     deploy:
@@ -30,7 +30,7 @@ services:
 
   borrow_service:
     
-    image: abbasshaik739/python:borrowimage
+    image: abbasshaik739/python1:borrowimage
     ports:
       - "5003"
     deploy:
@@ -40,7 +40,7 @@ services:
 
   frontend:
     
-    image: abbasshaik739/python:appimage
+    image: abbasshaik739/python1:appimage
     ports:
       - "5000"
     deploy:
